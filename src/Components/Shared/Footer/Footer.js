@@ -51,7 +51,7 @@ const Footer = () => {
                 </div>
             </div>
             <div style={{ backgroundColor: '#374151', color: 'white' }}>
-                <div className='container'>
+                <div className='container text-center'>
                     <div className="row">
                         <p className='py-2 pt-3'>&#169; {year} FatoBook. All Rights Reserved By <a className='text-decoration-none ms-1 fw-bold' href="https://github.com/Salikur6" target="_blank" rel="noopener noreferrer">Salikur Islam </a></p>
                     </div>

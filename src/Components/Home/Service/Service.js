@@ -1,9 +1,9 @@
 import React from 'react';
-import { Button, Card, CardGroup } from 'react-bootstrap';
+import { Button, Card } from 'react-bootstrap';
 import './Service.css'
 
 const Service = ({ service }) => {
-    const { id, img, name, price, description } = service;
+    const { img, name, price, description } = service;
     return (
         <div className='col-lg-4 col-md-6'>
             <Card className='service-card border-0' style={{ borderRadius: '40px ' }}>
