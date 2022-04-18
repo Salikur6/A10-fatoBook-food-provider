@@ -1,5 +1,26 @@
 
 
-@media only screen and (max-width: 600px){
-  
+@media screen and (max-width: 600px){
+    .banner-title{
+        font-size: 18px;
+    }
+    .banner-p{
+        font-size: 14px;
+    }
+}
+
+
+@media screen and (max-width: 900px){
+ .banner1{
+     height: calc(90vh+200px);
+ }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px){
+    .banner-title{
+        font-size: 20px;
+    }
+    .banner-p{
+        font-size: 16px;
+    }
 }
