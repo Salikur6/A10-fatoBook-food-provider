@@ -1,13 +1,35 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import logo from '../../../images/logo.png'
+import './header.css'
 
 const Header = () => {
+
+    const [colorChange, setColorchange] = useState(false);
+
+    const changeNavbarColor = () => {
+        if (window.scrollY >= 20) {
+            setColorchange(true);
+        }
+        else {
+            setColorchange(false);
+        }
+    };
+
+
+    useEffect(() => {
+        window.addEventListener("scroll", changeNavbarColor)
+    })
+
+
+
+
+
     return (
-        <Navbar fixed='top' className='bg-transparent' expand="lg">
+        <Navbar fixed='top' className={colorChange ? 'navbar colorChange' : 'navbar'} style={{ padding: '0' }} expand="lg">
             <Container>
-                <Navbar.Brand className='roundedCircle' as={Link} to="/"><img style={{ width: '85px', borderRadius: '25px' }} src={logo} alt="" /></Navbar.Brand>
+                <Navbar.Brand className='roundedCircle p-0' as={Link} to="/"><img style={{ width: '85px', borderRadius: '25px' }} src={logo} alt="" /></Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="mx-auto">

@@ -8,7 +8,7 @@ import './Banner.css'
 const Banner = () => {
     return (
         <>
-            <div className='position-relative'>
+            <div className='position-relative mb-5'>
 
                 <div className='main'>
                     <img style={{ height: '95vh' }} className='w-100 banner1' src={banner1} alt="" />
@@ -36,10 +36,9 @@ const Banner = () => {
                     <div className='row'>
                         <div className="col-lg-3 col-md-3"></div>
                         <div className="col-lg-6 col-md-8 col-12  ">
-                            <h2 className='banner-title fw-bold'>home food catering</h2>
-                            <h2 className='banner-title fw-bold'>Free Delivery Within an Hour</h2>
+                            <h2 className='banner-title fw-bold'>Fatobook Food catering <br />Free Delivery Within an Hour</h2>
 
-                            <p className='banner-p'>A restaurant or an eatery, is a business that prepares and serves food and drinks to customers. Meals are generally served and eaten on the premises, but many.
+                            <p className='banner-p my-4'>A restaurant or an eatery, is a business that prepares and serves food and drinks to customers. Meals are generally served and eaten on the premises, but many.
                             </p>
                             <button className='btn btn-warning'>Order Now</button>
 
