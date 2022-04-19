@@ -62,9 +62,7 @@ const Register = () => {
 
     const [
         createUserWithEmailAndPassword,
-        user,
         loading,
-        error,
     ] = useCreateUserWithEmailAndPassword(auth);
 
     const handleSubmit = e => {

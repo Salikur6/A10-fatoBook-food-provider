@@ -1,7 +1,7 @@
 import { XCircleIcon } from '@heroicons/react/solid';
 import React, { useEffect, useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
-import { useAuthState, useSendPasswordResetEmail, useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import { useSendPasswordResetEmail, useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import auth from '../../Firebase.init';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
