@@ -1,5 +1,6 @@
 import React from 'react';
 import { Card } from 'react-bootstrap';
+import { StarIcon } from '@heroicons/react/solid'
 
 const Reviews = () => {
     return (
@@ -25,7 +26,17 @@ const Reviews = () => {
                             <img style={{ width: '75px', borderRadius: '50px' }} src='https://images.generated.photos/PcwRAjIzAvt1njc47jeYDmiR1Ip1yyC-MHqwl-xWX4k/rs:fit:512:512/wm:0.95:sowe:18:18:0.33/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LnBob3Rvcy92M18w/MzMyNzk4LmpwZw.jpg' alt="" />
                             <h5 className='m-3 fw-bold'>Saifur Rahman</h5>
                         </div>
-                        <p className='my-3'>Coffee was fresh, the corned beef hash is amazing and homemade, even the toast was good! Oh, and the potato pancakes! Everything we ordered was fresh and delicious. Highly recommend! Definitely coming back.</p>
+                        <blockquote>
+                            <p className='my-3'>Coffee was fresh, the corned beef hash is amazing and homemade, even the toast was good! Oh, and the potato pancakes! Everything we ordered was fresh and delicious. Highly recommend! Definitely coming back.</p>
+                            <p className='fw-bold'>Rating:
+                                <StarIcon style={{ width: '20px' }} className='text-warning'></StarIcon>
+                                <StarIcon style={{ width: '20px' }} className='text-warning'></StarIcon>
+                                <StarIcon style={{ width: '20px' }} className='text-warning'></StarIcon>
+                                <StarIcon style={{ width: '20px' }} className='text-warning'></StarIcon>
+                                <StarIcon style={{ width: '20px' }} className='text-warning'></StarIcon>
+
+                            </p>
+                        </blockquote>
                     </Card>
                 </div>
                 <div className="col-lg-4 col-md-6">
@@ -35,6 +46,14 @@ const Reviews = () => {
                             <h5 className='m-3 fw-bold'>Salikur Islam</h5>
                         </div>
                         <p className='my-3'>The food was excellent and so was the service.  I had the mushroom risotto with scallops which was awesome. My wife had a burger over greens (gluten-free) which was also very good.</p>
+                        <p className='fw-bold'>Rating:
+                            <StarIcon style={{ width: '20px' }} className='text-warning'></StarIcon>
+                            <StarIcon style={{ width: '20px' }} className='text-warning'></StarIcon>
+
+                            <StarIcon style={{ width: '20px' }} className='text-warning'></StarIcon>
+                            <StarIcon style={{ width: '20px' }} className='text-warning'></StarIcon>
+
+                        </p>
                     </Card>
                 </div>
                 <div className="col-lg-4 col-md-6">
@@ -44,6 +63,14 @@ const Reviews = () => {
                             <h5 className='m-3 fw-bold'>Sofiul Rahman</h5>
                         </div>
                         <p className='my-3'>Great selection! My go to favorite is the Cape Cod Ruben. We also love their pizza. I just had the mushroom risotto with scallops and loved it!</p>
+                        <p className='fw-bold'>Rating:
+                            <StarIcon style={{ width: '20px' }} className='text-warning'></StarIcon>
+                            <StarIcon style={{ width: '20px' }} className='text-warning'></StarIcon>
+                            <StarIcon style={{ width: '20px' }} className='text-warning'></StarIcon>
+                            <StarIcon style={{ width: '20px' }} className='text-warning'></StarIcon>
+                            <StarIcon style={{ width: '20px' }} className='text-warning'></StarIcon>
+
+                        </p>
                     </Card>
                 </div>
 
@@ -54,6 +81,13 @@ const Reviews = () => {
                             <h5 className='m-3 fw-bold'>Abdul Alim</h5>
                         </div>
                         <p className='my-3'>Great pizza and brunch as well. We had a big party for my birthday brunch and our waitress Maddie was so nice and awesome even with our big loud table of 11 people. I had the garden Benedict which was great, as well as the pancakes.</p>
+                        <p className='fw-bold'>Rating:
+                            <StarIcon style={{ width: '20px' }} className='text-warning'></StarIcon>
+                            <StarIcon style={{ width: '20px' }} className='text-warning'></StarIcon>
+                            <StarIcon style={{ width: '20px' }} className='text-warning'></StarIcon>
+                            <StarIcon style={{ width: '20px' }} className='text-warning'></StarIcon>
+
+                        </p>
                     </Card>
                 </div>
 
@@ -64,6 +98,14 @@ const Reviews = () => {
                             <h5 className='m-3 fw-bold'>Saifur Mahi</h5>
                         </div>
                         <p className='my-3'>Great pizza, mozzarella sticks, calamari, chicken tenders, I could go on. Everything we’ve tried here has been amazing. The staff is always so friendly and accommodating.</p>
+                        <p className='fw-bold'>Rating:
+                            <StarIcon style={{ width: '20px' }} className='text-warning'></StarIcon>
+                            <StarIcon style={{ width: '20px' }} className='text-warning'></StarIcon>
+                            <StarIcon style={{ width: '20px' }} className='text-warning'></StarIcon>
+                            <StarIcon style={{ width: '20px' }} className='text-warning'></StarIcon>
+                            <StarIcon style={{ width: '20px' }} className='text-warning'></StarIcon>
+
+                        </p>
                     </Card>
                 </div>
 
@@ -74,6 +116,14 @@ const Reviews = () => {
                             <h5 className='m-3 fw-bold'>Jalal Ahmed</h5>
                         </div>
                         <p className='my-3'>Been coming here for 20+ years. Never disappointed. Good service combined with good food.</p>
+                        <p className='fw-bold'>Rating:
+                            <StarIcon style={{ width: '20px' }} className='text-warning'></StarIcon>
+                            <StarIcon style={{ width: '20px' }} className='text-warning'></StarIcon>
+                            <StarIcon style={{ width: '20px' }} className='text-warning'></StarIcon>
+                            <StarIcon style={{ width: '20px' }} className='text-warning'></StarIcon>
+                            <StarIcon style={{ width: '20px' }} className='text-warning'></StarIcon>
+
+                        </p>
                     </Card>
                 </div>
             </div>

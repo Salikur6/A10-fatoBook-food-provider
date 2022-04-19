@@ -1,0 +1,8 @@
+.checkout-form{
+    border-radius: 50px;
+    background: #e0e0e0;
+    box-shadow:  31px 31px 62px #c1c1c1,
+                 -31px -31px 62px #ffffff;
+             padding: 30px;
+
+}

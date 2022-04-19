@@ -1,41 +1,41 @@
 [
     {
-      "id": "625d8c7dc734e1e458429905",
+      "id": "1",
       "price": "$7",
       "img": "https://i.ibb.co/bgrwWFv/cake.jpg",
       "name": "Cup Cake",
       "description": "Everyone loves cupcakes! This is the only vanilla cupcake recipe you will need. They are super easy to make and the texture is light, fluffy, and melt-in-your-mouth good."
     },
     {
-      "id": "625d8c7de143db5694c33ec1",
+      "id": "2",
       "price": "$10",
       "img": "https://i.ibb.co/1MpYMKT/fries.jpg",
       "name": "French Fries",
       "description": "In a nutshell, here it is: Soak potatoes, dry potatoes, fry potatoes, drain potatoes, then fry again! Everyone loves tis french fries and soas."
     },
     {
-      "id": "625d8c7ddfd8420314c018cd",
+      "id": "3",
       "price": "$12",
       "img": "https://i.ibb.co/j8qgVCp/latte-coffe.jpg",
       "name": "Latte Coffe",
       "description": "Here’s how to make a latte at home! This cafe latte has the best creamy body and frothy milk: it tastes even better than a coffee shop."
     },
     {
-      "id": "625d8c7d1f9992d6e375c535",
+      "id": "4",
       "price": "$14",
       "img": "https://i.ibb.co/pK6dYLW/vegan.jpg",
       "name": "vegan food",
       "description": "If you’re looking to discover the best and biggest assortment of vegan foods, you’ve come to the right place."
     },
     {
-        "id": "625d8c7de143dba794c33ec1",
+        "id": "5",
         "price": "$11",
         "img": "https://i.ibb.co/pLZqJFW/pasta.jpg",
         "name": "VEGGIE PASTA",
         "description": "This pasta recipe is our new favorite cooking project! The fact that it’s absolutely delicious doesn’t hurt either."
       },
     {
-      "id": "625d8c7dca082415ee7c9ca4",
+      "id": "6",
       "price": "$12",
       "img": "https://i.ibb.co/yV8F0Ly/soup.jpg",
       "name": "Butternut Squash Soup",
