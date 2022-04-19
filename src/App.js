@@ -11,6 +11,7 @@ import About from './Components/About/About';
 import Login from './Components/Login/Login';
 import RequireAuth from './Components/RequireAuth/RequireAuth';
 import Register from './Components/Login/Register/Register';
+import NotFound from './Components/NotFound/NotFound';
 
 function App() {
   return (
@@ -31,6 +32,8 @@ function App() {
         <Route path='/register' element={<Register></Register>}></Route>
 
         <Route path='/login' element={<Login></Login>}></Route>
+
+        <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
 
 
