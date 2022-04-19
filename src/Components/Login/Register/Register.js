@@ -1,7 +1,8 @@
 import { XCircleIcon } from '@heroicons/react/solid';
+import { sendEmailVerification } from 'firebase/auth';
 import React, { useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
-import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 import auth from '../../../Firebase.init';
@@ -10,6 +11,7 @@ import Loading from '../../Loading/Loading';
 const Register = () => {
     const navigate = useNavigate();
     const location = useLocation();
+    const [name, setName] = useState('');
     const [userInfo, setUserInfo] = useState({
         email: '',
         password: '',
@@ -23,6 +25,9 @@ const Register = () => {
         others: ''
     });
 
+    const handleNameState = e => {
+        setName(e.target.value);
+    }
 
     const from = location.state?.from?.pathname || "/";
     const handleEmail = e => {
@@ -63,22 +68,25 @@ const Register = () => {
     const [
         createUserWithEmailAndPassword,
         loading,
-    ] = useCreateUserWithEmailAndPassword(auth);
+    ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
 
-    const handleSubmit = e => {
+    const [updateProfile] = useUpdateProfile(auth);
+
+
+    const handleSubmit = async e => {
         e.preventDefault();
-
-
         if (userInfo.email && userInfo.name && userInfo.password) {
-            createUserWithEmailAndPassword(userInfo.email, userInfo.password);
+            await createUserWithEmailAndPassword(userInfo.email, userInfo.password);
+            await updateProfile({ displayName: name });
+            await sendEmailVerification();
+            alert('Sent email');
+            alert('Updated profile');
             navigate(from, { replace: true });
             setErrors({ ...errors, others: '' })
         } else {
             setErrors({ ...errors, others: 'Fill All Input' })
         }
-
     }
-
 
     return (
         <div className='container'>
@@ -89,7 +97,7 @@ const Register = () => {
 
                 <Form.Group className="mb-3">
                     <Form.Label className='fw-bold'>Your Name</Form.Label>
-                    <Form.Control onChange={handleName} type="text" placeholder="Your Name" />
+                    <Form.Control name='name' onBlur={handleNameState} onChange={handleName} type="text" placeholder="Your Name" />
 
                     {errors?.name && <p className='fw-bold text-danger'> <XCircleIcon style={{ height: '15px', width: '15px', marginRight: '4px' }}></XCircleIcon>{errors.name}</p>}
                 </Form.Group>
