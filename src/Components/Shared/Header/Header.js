@@ -3,12 +3,16 @@ import { Container, Nav, Navbar } from 'react-bootstrap';
 import { Link, useLocation } from 'react-router-dom';
 import logo from '../../../images/logo.png'
 import logo1 from '../../../images/logo1.png'
-import './header.css'
+import { useAuthState } from 'react-firebase-hooks/auth';
+import './header.css';
+import auth from '../../../Firebase.init';
+import { signOut } from 'firebase/auth';
 
 const Header = () => {
 
 
     const [colorChange, setColorchange] = useState(false);
+    const [user] = useAuthState(auth);
 
     const changeNavbarColor = () => {
         if (window.scrollY >= 20) {
@@ -27,7 +31,7 @@ const Header = () => {
     const location = useLocation();
     let active = false;
 
-    if (location.pathname === "/services" || location.pathname === "/about" || location.pathname === '/blogs' || location.pathname === '/login') {
+    if (location.pathname === "/services" || location.pathname === "/about" || location.pathname === '/blogs' || location.pathname === '/login' || location.pathname === '/register') {
         active = true;
     }
 
@@ -53,6 +57,12 @@ const Header = () => {
                         <Nav.Link as={Link} to="/about" className={active ? 'blur text-warning fw-bold' : 'text-white fw-bold'}>About Me</Nav.Link>
 
                         <Nav.Link as={Link} to="/login" className={active ? 'blur text-warning fw-bold' : 'text-white fw-bold'}>Login</Nav.Link>
+
+                        {user?.uid ? '' : <Nav.Link as={Link} to="/register" className={active ? 'blur text-warning fw-bold' : 'text-white fw-bold'}>Register</Nav.Link>}
+
+
+
+                        {user?.uid ? <Nav.Link onClick={() => signOut(auth)} className={active ? 'blur text-warning fw-bold' : 'text-white fw-bold'}>Sign Out</Nav.Link> : ""}
 
                     </Nav>
                 </Navbar.Collapse>
