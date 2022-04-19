@@ -112,19 +112,20 @@ const Login = () => {
     return (
         <div className='container'>
             <div style={{ height: '100px' }}></div>
-            <h1 className='text-center'>this is Login page </h1>
+            <h1 className='text-center fw-bold text-primary'>Please Register to Continue</h1>
 
             <Form className='w-75 mx-auto my-5' onSubmit={handleSubmit}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Email address</Form.Label>
-                    <Form.Control onChange={handleEmail} type="email" placeholder="Enter email" />
+                    <Form.Control onChange={handleEmail} type="email" placeholder="Enter email" required />
 
                     {errors?.email && <p className='fw-bold text-danger'> <XCircleIcon style={{ height: '15px', width: '15px', marginRight: '4px' }}></XCircleIcon>{errors.email}</p>}
                 </Form.Group>
 
                 <Form.Group className="mb-3" controlId="formBasicPassword">
                     <Form.Label>Password</Form.Label>
-                    <Form.Control onChange={handlePassword} type="password" placeholder="Password" />
+                    <Form.Control onChange={handlePassword} type="password" placeholder="Password" required />
+
                     {errors?.password && <p className='fw-bold text-danger'> <XCircleIcon style={{ height: '15px', width: '15px', marginRight: '4px' }}></XCircleIcon>{errors.password}</p>}
                 </Form.Group>
 

@@ -15,7 +15,7 @@ const Header = () => {
     const [user] = useAuthState(auth);
 
     const changeNavbarColor = () => {
-        if (window.scrollY >= 20) {
+        if (window.scrollY >= 10) {
             setColorchange(true);
         }
         else {

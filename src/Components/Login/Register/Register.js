@@ -85,7 +85,7 @@ const Register = () => {
     return (
         <div className='container'>
             <div style={{ height: '100px' }}></div>
-            <h1 className='text-center'>this is Register page </h1>
+            <h1 className='text-center text-primary fw-bold'>Please Register to Continue</h1>
 
             <Form className='w-75 mx-auto my-5' onSubmit={handleSubmit}>
 
@@ -99,14 +99,16 @@ const Register = () => {
 
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label className='fw-bold'>Email address</Form.Label>
-                    <Form.Control onChange={handleEmail} type="email" placeholder="Enter email" />
+                    <Form.Control onChange={handleEmail} type="email" placeholder="Enter email" required />
 
                     {errors?.email && <p className='fw-bold text-danger'> <XCircleIcon style={{ height: '15px', width: '15px', marginRight: '4px' }}></XCircleIcon>{errors.email}</p>}
                 </Form.Group>
 
                 <Form.Group className="mb-3" controlId="formBasicPassword">
                     <Form.Label className='fw-bold'>Password</Form.Label>
-                    <Form.Control onChange={handlePassword} type="password" placeholder="Password" />
+                    <Form.Control onChange={handlePassword} type="password" placeholder="Password" required />
+
+
                     {errors?.password && <p className='fw-bold text-danger'> <XCircleIcon style={{ height: '15px', width: '15px', marginRight: '4px' }}></XCircleIcon>{errors.password}</p>}
                 </Form.Group>
 
@@ -118,7 +120,7 @@ const Register = () => {
                 {loading && <Loading></Loading>}
             </Form>
 
-            <p className='fw-bold'>Already have an account, <Link to='/login'>Click to Login</Link></p>
+            <p className='fw-bold text-center my-5 fs-5'>Already have an account, <Link to='/login'>Click to Login</Link></p>
 
             <ToastContainer className='fw-bold' />
         </div>
